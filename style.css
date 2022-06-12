@@ -4,7 +4,7 @@
   --header-height: 3rem;
 
   /* ----- COLORS ----- */
-  --background-color: #ffffff;
+  --background-color: #F8F8FA;
   --primary-color: #3456FF;
   --button-color: #6b84ff;
   --overlay-color: #070928;
@@ -307,8 +307,9 @@ img {
     transition: .5s;
   }
 
-  img{
+  .home__img{
     width: 250px;
+    right: 0;
   }
 }
 
@@ -370,7 +371,7 @@ img {
     margin-bottom: var(--m-0);
   }
   .home__img {
-    width: auto;
+    width: 553px;
     right: 0;
     top: -20%;
   }
