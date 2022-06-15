@@ -1,18 +1,13 @@
 /* ===== MENU SHOW ===== */
-const showMenu = (toggleId, navId) => {
-  const toggle = document.getElementById(toggleId),
-    nav = document.getElementById(navId);
+const navMenu = document.getElementById('nav-menu'),
+      navToggle = document.getElementById('nav-toggle'),
+      navClose = document.getElementById('nav-close')
 
-  //Validate that variables exist
-  if (toggle && nav) {
-    toggle.addEventListener("click", () => {
-      nav.classList.toggle('show-menu');
-    });
-  }
-};
-
-showMenu("nav-toggle", "nav-menu");
-
+      if(navToggle){
+        navToggle.addEventListener('click', () => {
+          navMenu.classList.add('show-menu')
+        })
+      }
 
 /* ====== ANIMATE ====== */
 // OVERLAY
@@ -21,7 +16,7 @@ gsap.to(".second", 1.5, { delay: 0.7, top: "-100%", ease: Expo.easeInOut });
 gsap.to(".third", 1.5, { delay: 0.9, top: "-100%", ease: Expo.easeInOut });
 
 // IMAGE
-gsap.from('.home__img', {opcaity: 0, duration: 2, delay: 2, x: 60})
+gsap.from('.home__img', {opcaity: 0, duration: 3.3, delay: 2, x: 1000})
 
 // NAV ITEM
 gsap.from(".nav__logo", {opacity: 0,duration: 3,delay: 3.2,y: 25,ease: "expo.out",});
