@@ -1,13 +1,15 @@
 /* ===== MENU SHOW ===== */
-const navMenu = document.getElementById('nav-menu'),
-      navToggle = document.getElementById('nav-toggle'),
-      navClose = document.getElementById('nav-close')
+const showMenu = (toggleId, navId) =>{
+  const toggle = document.getElementById(toggleId),
+  nav = document.getElementById(navId)
 
-      if(navToggle){
-        navToggle.addEventListener('click', () => {
-          navMenu.classList.add('show-menu')
-        })
-      }
+  if(toggle && nav){
+      toggle.addEventListener('click', ()=>{
+          nav.classList.toggle('show-menu')
+      })
+  }
+}
+showMenu('nav-toggle','nav-menu')
 
 /* ====== ANIMATE ====== */
 // OVERLAY
