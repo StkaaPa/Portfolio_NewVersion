@@ -72,12 +72,6 @@ body.dark-theme{
   --text-button-color: black;
 }
 
-/* ----- PARTICLES BACKGROUND ----- */
-#particles-js{
-  height: 100%;
-  background: #6c72cb;
-  z-index: var(--z-back);
-}
 
 /* ----- BASE ----- */
 *, ::before, ::after {
