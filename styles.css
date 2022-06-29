@@ -99,6 +99,9 @@ ul {
 
 a {
   text-decoration: none;
+  color: var(--text-color);
+  width: auto;
+  height: auto;
 }
 
 i {
@@ -175,7 +178,7 @@ img {
 .nav__link:hover::after {
   position: absolute;
   content: '';
-  width: 1.5rem;
+  width: 2rem;
   height: 0.1875rem;
   left: 0.125rem;
   top: 2.125rem;
