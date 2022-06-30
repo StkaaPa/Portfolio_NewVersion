@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"/>
+        <title>Samuel portfolio</title>
+    </head>
+    <body>
+        <!----- OVERLAY ----->
+        <div class="overlay first"></div>
+        <div class="overlay second"></div>
+        <div class="overlay third"></div>
+
+        <!----- HEADER ----->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo">SamueL</a>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="home" class="nav__link">Home</a></li>
+                        <li class="nav__item"><a href="about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Services</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+                        <li class="nav__item"><i id="moon-button" class="bi bi-moon change-theme"></i></li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <ion-icon name="menu"></ion-icon>
+                </div>
+            </nav>
+        </header>
+
+        <!----- MAIN ----->
+        <main class="l-main bd-grid">
+            <section class="home" id="home">
+                <div class="home__information">
+                    <span class="home__present anime-text">Hello, My Name Is</span>
+                    <h1 class="home__title anime-text">Samuel Gonçalves</h1>
+                    <span class="home__skill anime-text">ETL Consulting</span>
+
+                    <div><a href="profile.png" class="home__button" download>DOWNLOAD CV</a></div>
+                </div>
+
+                <div class="home__social">
+                    <a href="https://www.instagram.com/webdevstk/" target="_blank"><ion-icon name="logo-linkedin" class="home__social-icon"></ion-icon></a>
+                    <a href="https://www.instagram.com/webdevstk/" target="_blank"><ion-icon name="logo-instagram" class="home__social-icon"></ion-icon></a>
+                    <a href="https://www.instagram.com/webdevstk/" target="_blank"><ion-icon name="logo-github" class="home__social-icon"></ion-icon></a>
+                </div>
+            </section>
+            <section class="about" id="about">
+                <h2 class="section-tittle">hello world</h2>
+                <div class="about__container bd-grid">
+                    <div>
+                        <h2 class="about__subtittle">Olá xD</h2>
+                        <p class="about_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel repellendus atque fugiat enim aliquam eum optio. Beatae sint dolorem, culpa fugit quae inventore animi explicabo, consectetur illo, incidunt facilis molestias?</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!----- GSAP ----->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+
+        <!----- MAIN ----->
+        <script src="main.js"></script>
+
+        <!----- ICONS ----->
+        <script  type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    </body>
+</html>
