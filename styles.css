@@ -108,14 +108,14 @@ img{
 .section{
   padding: 3rem 0 2rem 0;
 }
-.section-tittle{
+.section__tittle{
   position: relative;
   font-size: var(--h2-font-size);
   color: var(--text-color);
-  margin: var(--m-3) 0;
+  margin-top: var(--m-1-5);
   text-align: center;
 }
-.section-tittle::after{
+.section__tittle::after{
   position: absolute;
   content:'';
   width: 32px;
@@ -126,8 +126,40 @@ img{
   top: 2rem;
   background-color: var(--primary-color);
 }
+.section__subtittle{
+  display: block;
+  font-size: var(--small-font-size);
+  font-weight: 400;
+  margin-bottom: var(--m-3);
+}
+.section-tittle,
+.section__subtittle{
+  text-align: center;
+}
+.button{
+  display: inline-block;
+  margin-top: var(--m-2);
+  font-size: var(--normal-font-size);
+  color: var(--text-button-color);
+  padding: .7rem 1rem;
+  border-radius: .4rem;
+  background-color: var(--button-color);
+}
+.button:hover{
+opacity: .85;
+}
+
 
 /* ===== LAYOUT ===== */
+.container{
+  max-width: 768px;
+  margin-left: var(--m-1-5);
+  margin-right: var(--m-1-5);
+}
+.grid{
+  display: grid;
+  gap: 1.5rem;
+}
 .bd-grid{
   max-width: 1024px;
   display: grid;
@@ -137,7 +169,6 @@ img{
   margin-left: var(--mb-2);
   margin-right: var(--mb-2);
 }
-
 .l-header{
   width: 100%;
   position: fixed;
@@ -157,7 +188,6 @@ img{
   align-items: center;
   font-weight: var(--font-medium);
 }
-
 @media screen and (max-width: 768px){
   .nav__menu{
     position: fixed;
@@ -170,25 +200,20 @@ img{
     transition: .5s;
   }
 }
-
 .nav__item{
   margin-bottom: var(--m-3);
 }
-
 .dark{
   cursor: pointer;
   font-size: 1.225rem;
 }
-
 .nav__link{
   position: relative;
   color: var(--text-color);
 }
-
 .nav__link:hover{
   position: relative;
 }
-
 .nav__link:hover::after{
   position: absolute;
   content: "";
@@ -198,65 +223,48 @@ img{
   top: 1.5rem;
   background-color: red;
 }
-
 .nav__logo {
   color: red;
   padding: 1rem 1rem;
 }
-
 .nav__toggle{
   color: red;
   font-size: 1.5rem;
   cursor: pointer;
 }
 
+
 /* ===== SHOW MENU ===== */
 .show{
   right: 0;
 }
+
 
 /* ===== HOME SECTION LAYOUT ===== */
 .home{
   height: calc(100vh - 3rem);
   row-gap: 1rem;
 }
-
 .home__information{
   align-items: center;
 }
-
 .home__present{
   font-size: var(--h3-font-size)
 }
-
 .home__tittle{
   font-size: var(--big-font-size);
+  margin-bottom: var(--m-1);
 }
-
+.home__tittle-color{
+  color: var(--primary-color);
+}
 .home__skill{
-  font-size: var(--h4-font-size);
+  font-size: var(--h3-font-size);
 }
-
-.home__button{
-    display: inline-block;
-    margin-top: var(--m-2);
-    font-size: var(--normal-font-size);
-    color: var(--text-button-color);
-    padding: .7rem 1rem;
-    border-radius: .4rem;
-    background-color: var(--button-color);
-}
-
-.home__button:hover{
-  opacity: .85;
-}
-
 .home__social {
  display: flex;
  flex-direction: column;
- padding-bottom: var(--p-1);
 }
-
 .home__social-icon {
   width: max-content;
   height: max-content;
@@ -265,7 +273,66 @@ img{
   cursor: pointer;
   color: red;
 }
-
 .home__social-icon:hover{
   color: var(--button-color);
+}
+.home__img{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 295px;
+}
+
+/* ===== ABOUT SECTION LAYOUT ===== */
+.about__img{
+  width: 200px;
+  border-radius: .5rem;
+  justify-self: center;
+  align-self: center;
+}
+.about__description{
+  text-align: center;
+  margin-bottom: var(--mb-2)
+}
+.about__info{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2rem 0 0 0;
+}
+.about__info-tittle{
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-semi-bold);
+  color: var(--text-color);
+}
+.about__info-name{
+  font-size: var(--small-font-size);
+  font-weight: 400;
+}
+.about__info-tittle,
+.about__info-name{
+  display: block;
+  text-align: center;
+}
+.about__button{
+  display: flex;
+  justify-content: center;
+}
+
+
+/* ===== MEDIA QUERIES ===== */
+@media screen and (min-width: 768px){
+  body{
+    margin: var(--header-height) 0 0 0;
+  }
+  .section{
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+  }
+  .section-tittle{
+    margin-bottom: var(--mb-3);
+  }
+  .home__social {
+    display: flex;
+    flex-direction: row;
+   }
 }
