@@ -4,7 +4,7 @@
   --header-height: 3rem;
 
   /* ===== COLORS ===== */
-  --background-color: #F8F8FA;
+  --background-color: #dfdfdf;
   --primary-color: #3456FF;
   --button-color: #6b84ff;
   --overlay-color: #070928;
@@ -86,7 +86,7 @@ body{
   color: var(--text-color);
   line-height: 1.6;
 }
-h1,h2,p{
+h1,h2,h3,h4,p{
   margin: 0;
 }
 ul{
@@ -115,7 +115,7 @@ img{
   margin-top: var(--m-1-5);
   text-align: center;
 }
-.section__tittle::after{
+/*.section__tittle::after{
   position: absolute;
   content:'';
   width: 32px;
@@ -125,7 +125,7 @@ img{
   margin: auto;
   top: 2rem;
   background-color: var(--primary-color);
-}
+}*/
 .section__subtittle{
   display: block;
   font-size: var(--small-font-size);
@@ -318,6 +318,144 @@ opacity: .85;
   justify-content: center;
 }
 
+/* ===== SKILLS SECTION LAYOUT ===== */
+.skills__container{
+  row-gap: 0;
+}
+.skills__header{
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--m-0-5);
+  cursor: pointer;
+}
+.skills__icon, .skills__arrow{
+  font-size: 1.75rem;
+  color: var(--button-color);
+}
+.skills__icon{
+  margin-right: var(--m-1);
+}
+.skills__tittle{
+  font-size: var(--h4-font-size);
+}
+.skills__subtittle{
+  font-size: var(--normal-font-size);
+  font-weight: 400;
+}
+.skills__arrow{
+  margin-left: auto;
+  transition: .4s;
+}
+.skills__list{
+  row-gap: 1.5rem;
+  padding-left: 2.7rem;
+}
+.skills__tittles{
+  display: flex;
+  justify-content: space-between;
+}
+.skills__name{
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-small);
+}
+.skills__bar, .skills__percentage{
+  height: 5px;
+  border-radius: .25rem;
+}
+.skills__bar{
+  background-color: lightskyblue;
+}
+.skills__percentage{
+  display: block;
+  background-color: var(--button-color);
+}
+.skills__sql{
+ width: 95%;
+}
+.skills__odi{
+  width: 90%;
+}
+.skills__tws{
+  width: 80%;
+}
+.skills__denodo{
+  width: 90%;
+}
+.skills_html{
+  width: 95%;
+}
+.skills__css{
+  width: 95%;
+}
+.skills__js{
+  width: 50%;
+}
+.skills_vsc{
+  width: 100%;
+}
+.skills__androidstudio{
+  width: 35%;
+}
+.skills__autocad{
+  width: 45%;
+}
+.skills_pt{
+  width: 100%;
+}
+.skills_en{
+  width: 85%;
+}
+.skills__fr{
+  width: 10%;
+}
+.skills__es{
+  width: 20%;
+}
+.skills__close .skills__list{
+  height: 0;
+  overflow: hidden;
+}
+.skills__open .skills__list{
+  height: max-content;
+  margin-bottom: var(--m-2-5);
+}
+.skills__open .skills__arrow{
+  transform: rotate(-180deg);
+}
+
+/* ===== QUALIFICATION SECTION LAYOUT ===== */
+.qualification__tabs{
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+}
+.qualification__button{
+  font-size: 1.1rem;
+  font-weight: var(--font-medium);
+  cursor: pointer;
+}
+.qualification__button:hover{
+  color: var(--button-color);
+}
+.qualification__icon{
+  font-size: 1rem;
+  margin-right: var(--m-0-25);
+}
+.qualification__data{
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  column-gap: 1.2rem;
+}
+.qualification__title{
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-semi-bold);
+}
+.qualification__subtitle{
+  display: inline-block;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-small);
+  margin-bottom: var(--mb-1);
+}
 
 /* ===== MEDIA QUERIES ===== */
 @media screen and (min-width: 768px){
