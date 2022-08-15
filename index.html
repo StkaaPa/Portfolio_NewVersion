@@ -340,18 +340,18 @@
 
         <div class="qualification__container container">
           <div class="qualification__tabs">
-            <div class="qualification__button button--flex">
+            <div class="qualification__button button--flex qualification__active" data-target="#education">
               <ion-icon class="qualification__icon" name="school"></ion-icon> Education
             </div>
 
-            <div class="qualification__button button--flex">
+            <div class="qualification__button button--flex" data-target="#work">
               <ion-icon class="qualification__icon" name="briefcase"></ion-icon> Work
             </div>
           </div>
 
           <div class="qualification__sections">
             <!--===== QUALIFICATION CONTENT 1 =====-->
-            <div class="qualification__content">
+            <div class="qualification__content qualification__active" data-content id="education">
               <!--===== QUALIFICATION 1 =====-->
               <div class="qualification__data">
                 <div>
@@ -387,7 +387,7 @@
             </div>
 
             <!--===== QUALIFICATION CONTENT 2 =====-->
-            <div class="qualification__content">
+            <div class="qualification__content" data-content id="work">
               <!--===== QUALIFICATION 1 =====-->
               <div class="qualification__data">
                 <div>
