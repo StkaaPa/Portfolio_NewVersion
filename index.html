@@ -4,9 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="/assets/swiper-bundle.min.css">
+    <!--===== SWIPER =====-->
+    <link rel="stylesheet" href="assets/swiper-bundle.min.css">
+
     <!--===== UNICONS =====-->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
     <!--===== CSS =====-->
     <link rel="stylesheet" href="styles.css" />
 
@@ -456,10 +459,10 @@
         <h2 class="section__tittle">Portfolio</h2>
         <span class="section__subtittle">Some of my work</span>
 
-        <div class="portfolio__container container">
-          <div>
+        <div class="portfolio__container container swiper mySwiper">
+          <div class="swiper-wrapper">
             <!--===== PORTFOLIO 1 =====-->
-            <div class="portfolio__content grid">
+            <div class="portfolio__content grid swiper-slide">
               <img src="/img/to-do-list.png" alt="" class="portfolio__img">
 
               <div class="portfolio__data">
@@ -472,18 +475,21 @@
             </div>
 
             <!--===== PORTFOLIO 2 =====-->
-            <div class="portfolio__content grid">
+            <div class="portfolio__content grid swiper-slide">
               <img src="/img/gerar-pass.png" alt="" class="portfolio__img">
 
               <div class="portfolio__data">
                 <h3 class="portfolio__tittle">Generate Password</h3>
-                <p class="portfolio__description">An app, which can generate a random password with uppercase letters, lowercase letters, special characters and numbers. It´s not finished.</p>
+                <p class="portfolio__description">Generate a random password with uppercase letters, lowercase letters, special characters and numbers</p>
                 <a href="#" class="button button--flex button--small portfolio__button"> Demo
                   <i class="uil uil-arrow-right button__icon"></i>
                 </a>
               </div>
             </div>
+
           </div>
+          <!--===== ADD PAGINATION =====-->
+          <div class="swiper-pagination"></div>
         </div>
       </section>
     </main>
@@ -491,7 +497,17 @@
     <!--=== MAIN JS ===-->
     <script src="/main.js"></script>
 
-    <script src="/assets/swiper-bundle.min.js"></script>
+    <!--=== SWIPER JS ===-->
+    <script src="assets/swiper-bundle.min.js"></script>
+
+    <script>
+      let swiper = new Swiper(".mySwiper", {
+        pagination: {
+          el: ".swiper-pagination",
+          dynamicBullets: true,
+        },
+      });
+    </script>
 
     <!--=== SCROLL REVEAL ===-->
     <script src="https://unpkg.com/scrollreveal"></script>
