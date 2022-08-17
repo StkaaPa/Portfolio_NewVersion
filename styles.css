@@ -283,6 +283,7 @@ opacity: .85;
   width: 295px;
 }
 
+
 /* ===== ABOUT SECTION LAYOUT ===== */
 .about__img{
   width: 200px;
@@ -317,6 +318,7 @@ opacity: .85;
   display: flex;
   justify-content: center;
 }
+
 
 /* ===== SKILLS SECTION LAYOUT ===== */
 .skills__container{
@@ -423,6 +425,7 @@ opacity: .85;
   transform: rotate(-180deg);
 }
 
+
 /* ===== QUALIFICATION SECTION LAYOUT ===== */
 .qualification__tabs{
   display: flex;
@@ -485,6 +488,7 @@ opacity: .85;
   color: var(--button-color);
 }
 
+
 /* ===== PORTFOLIO SCETION ===== */
 .portfolio__container{
   overflow: initial;
@@ -506,8 +510,14 @@ opacity: .85;
   font-weight: 400;
   font-size: var(--small-font-size);
 }
-.portfolio__button:hover .button__icon{
-  transform: translateX(.25rem);
+.swiper-horizontal > .swiper-pagination-bullets{
+  bottom: -1.6rem;
+}
+.swiper-pagination-bullet-active{
+  background-color: var(--button-color);
+}
+.swiper-pagination-bullet{
+  outline: none;
 }
 
 
