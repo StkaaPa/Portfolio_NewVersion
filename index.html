@@ -17,14 +17,12 @@
   </head>
   <body>
     <!--=== HEADER ===-->
-    <header class="l-header">
-      <nav class="nav bd-grid">
-        <div>
-          <a href="#" class="nav__logo">SamueL</a>
-        </div>
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav__logo">Samuel</a>
 
         <div class="nav__menu" id="nav-menu">
-          <ul class="nav__list">
+          <ul class="nav__list grid">
             <li class="nav__item">
               <a href="#home" class="nav__link">Home</a>
             </li>
@@ -35,19 +33,26 @@
               <a href="#skills" class="nav__link">Skills</a>
             </li>
             <li class="nav__item">
+              <a href="#qualification" class="nav__link">Qualification</a>
+            </li>
+            <li class="nav__item">
               <a href="#portfolio" class="nav__link">Portfolio</a>
             </li>
             <li class="nav__item">
               <a href="#contact" class="nav__link">Contact</a>
             </li>
             <li class="nav__item">
-              <i class="uil uil-moon change-theme" id="theme-button"></i>
+              <a>
+                <i class="uil uil-moon change-theme" id="theme-button"></i>
+              </a>
             </li>
           </ul>
         </div>
 
-        <div class="nav__toggle" id="nav-toggle">
-          <i class="uil uil-bars"></i>
+        <div class="nav__btns">
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="uil uil-bars"></i>
+          </div>
         </div>
       </nav>
     </header>
@@ -55,40 +60,7 @@
     <!--=== MAIN ===-->
     <main class="l-main">
       <!--========== HOME SECTION ===========-->
-      <section class="home bd-grid" id="home">
-        <div class="home__information">
-          <span class="home__present anime-text">Hello, </span>
-          <h1 class="home__tittle anime-text">
-            I'm <span class="home__tittle-color">Samuel</span>
-          </h1>
-          <span class="home__skill anime-text">ETL Consulting</span>
-
-          <div><a href="#contact" class="button">Contact Me 
-                <i class="uil uil-forwaded-call"></i>
-              </a>
-          </div>
-        </div>
-
-        <div class="home__social">
-          <a
-            href="https://www.instagram.com/webdevstk/"
-            class="home__social-icon"
-          >
-          <i class="uil uil-instagram"></i>
-          </a>
-          <a
-            href="https://www.instagram.com/webdevstk/"
-            class="home__social-icon"
-          >
-          <i class="uil uil-instagram"></i>
-          </a>
-          <a
-            href="https://www.instagram.com/webdevstk/"
-            class="home__social-icon"
-          >
-          <i class="uil uil-instagram"></i>
-          </a>
-        </div>
+      <section class="home" id="home">
       </section>
 
       <!--========== ABOUT SECTION ===========-->
