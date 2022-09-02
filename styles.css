@@ -131,6 +131,11 @@ img{
 .button:hover{
 opacity: .85;
 }
+.button__icon{
+  font-size: 1.25rem;
+  margin-left: var(--m-0-5);
+  transition: .3s;
+}
 
 
 /* ===== LAYOUT ===== */
@@ -246,7 +251,7 @@ opacity: .85;
   fill: var(--primary-color)
 }
 .home__blob-img{
-  width: 170px;
+  width: 220px;
 }
 .home__data{
   grid-column: 1/3;
@@ -590,6 +595,9 @@ opacity: .85;
   .section-tittle{
     margin-bottom: var(--m-3);
   }
+  .section__subtittle{
+    margin-bottom: 4rem;
+  }
   .header,
   .main,
   .footer__container{
@@ -618,5 +626,7 @@ opacity: .85;
 
 
   /* ===== HOME QUERY ===== */
-
+.home__container{
+  row-gap: 5rem;
+}
 }
