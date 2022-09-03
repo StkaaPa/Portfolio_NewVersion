@@ -1,0 +1,96 @@
+/** ========== GOOGLE FONTS ========== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+
+/** ========== VARIABLES CSS ========== */
+:root{
+    --header-heigh: 3rem;
+
+    /** ========== COLORS ========== */
+    /** ========== FONT AND TYPOGRAPHY ========== */
+    /** ========== FONT-SIZE ========== */
+    /** ========== FONT WEIGHT ========== */
+    /** ========== MARGINS ========== */
+    /** ========== PADDINGS ========== */
+    /** ========== Z-INDEX ========== */
+    /** ========== DARK MODE ========== */
+}
+
+
+/** ========== FONT SIZE FOR LARGE DEVICES ========== */
+@media screen and (min-width: 968px) {
+    :root{
+
+    }
+}
+
+
+/** ========== BASE ========== */
+*, ::before, ::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0 0 var(--header-heigh) 0;
+    font-family: var();
+    font-size: var();
+    background-color: var();
+    color: var();
+}
+h1,h2,h3,h4 {
+    color: var();
+    font-weight: var();
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+/** ========== REUSABLE CSS CLASSES ========== */
+.section{
+    padding: 2rem 0 4rem 0;
+}
+.section__tittle{
+    font-size: var();
+    color: var();
+}
+.section__subtittle{
+    display: block;
+    font-size: var();
+    margin-bottom: var();
+}
+.section__tittle,
+.section__subtittle{
+    text-align: center;
+}
+
+
+/** ========== LAYOUT ========== */
+.container{
+    max-width: 768px;
+    margin-left: var();
+    margin-right: var();
+}
+.grid{
+    display: grid;
+    gap: 1.5rem;
+}
+.header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var();
+    background-color: var();
+}
