@@ -86,6 +86,9 @@ img{
     display: grid;
     gap: 1.5rem;
 }
+
+
+/** ========== HEADER SECTION ==========*/
 .header{
     width: 100%;
     position: fixed;
@@ -93,4 +96,18 @@ img{
     left: 0;
     z-index: var();
     background-color: var();
+}
+.nav{
+    max-width: 968px;
+    height: var(--header-heigh);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav__logo{
+    color: violet;
+    font-weight: 500;
+}
+.nav__logo:hover{
+    color: red;
 }
