@@ -1,16 +1,24 @@
 /* ===== SHOW MENU ===== */
-const showMenu = (toggleId, navId) =>{
-  const toggle = document.getElementById(toggleId), nav = document.getElementById(navId)
+const showMenu = (toggleId, navId, closeId) =>{
+  const toggle = document.getElementById(toggleId), 
+        nav = document.getElementById(navId), 
+        navClose = document.getElementById(closeId)
 
   if(toggle && nav){
     toggle.addEventListener('click', () => {
       nav.classList.toggle('show')
     })
   }
-}
-showMenu('nav-toggle','nav-menu')
 
-/*-------------------------------------------------------------------------------------------------------------------------- */
+  if(navClose){
+    navClose.addEventListener('click', () => {
+      nav.classList.remove('show')
+    })
+  }
+}
+showMenu('nav-toggle','nav-menu','nav-close')
+
+/*--------------------------------------------------------------------------------------- */
 /* ===== ACTIVE AND REMOVE MENU ===== */
 const navLink = document.querySelectorAll('.nav__link')
 
@@ -21,7 +29,7 @@ function linkAction(){
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
-/*-------------------------------------------------------------------------------------------------------------------------- */
+/*--------------------------------------------------------------------------------------- */
 /* ===== QUALIFICATION TABS ===== */
 const tabs = document.querySelectorAll('[data-target]'),
       tabContents = document.querySelectorAll('[data-content]')
@@ -43,7 +51,7 @@ tabs.forEach(tab => {
 });
 
 
-/*-------------------------------------------------------------------------------------------------------------------------- */
+/*-------------------------------------------------------------------------------------- */
 /* ===== OPEN/CLOSE SKILLS LIST ===== */
 const skillsContent = document.getElementsByClassName('skills__content'),
       skillsHeader = document.querySelectorAll('.skills__header');
@@ -63,7 +71,7 @@ skillsHeader.forEach((el) => {
   el.addEventListener('click', toggleSkills)
 });
 
-/*-------------------------------------------------------------------------------------------------------------------------- */
+/*-------------------------------------------------------------------------------------- */
 /* ===== DARK LIGHT THEME ===== */
 const themeButton = document.getElementById('theme-button')
 const darkTheme = 'dark-theme'
