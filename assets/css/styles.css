@@ -4,23 +4,75 @@
 
 /** ========== VARIABLES CSS ========== */
 :root{
-    --header-heigh: 3rem;
+    --header-height: 3rem;
 
     /** ========== COLORS ========== */
-    /** ========== FONT AND TYPOGRAPHY ========== */
-    /** ========== FONT-SIZE ========== */
-    /** ========== FONT WEIGHT ========== */
-    /** ========== MARGINS ========== */
-    /** ========== PADDINGS ========== */
-    /** ========== Z-INDEX ========== */
-    /** ========== DARK MODE ========== */
-}
+    --first-color: #3456ff;
+    --second-color: #070928;
+    --third-color: #F8F8FA;
+    --fourth-color: #ffffff;
 
+    /** ========== FONT AND TYPOGRAPHY ========== */
+    --body-font: 'Poppins', sans-serif;
+
+    /** ========== FONT-SIZE ========== */
+    /*! .5rem = 8px; 1rem = 16px; 1.5rem = 24px; ..... */
+    --big-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+    /** ========== FONT WEIGHT ========== */
+    --font-small: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+    /** ========== MARGINS ========== */
+    /*! .25rem = 4px; .5rem = 8px; .75rem = 12px; ..... */
+    --m-0-25: .25rem;
+    --m-0-5: .5rem;
+    --m-0-75: .75rem;
+    --m-1: 1rem;
+    --m-1-5: 1.5rem;
+    --m-2: 2rem;
+    --m-2-5: 2.5rem;
+    --m-3: 3rem;
+
+    /** ========== PADDINGS ========== */
+    --p-0-25: .25rem;
+    --p-0-5: .5rem;
+    --p-0-75: .75rem;
+    --p-1: 1rem;
+    --p-1-5: 1.5rem;
+    --p-2: 2rem;
+    --p-2-5: 2.5rem;
+    --p-3: 3rem;
+    
+    /** ========== Z-INDEX ========== */
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+
+    /** ========== DARK MODE ========== */
+    --first-color: #215BF0;
+    --second-color: #0A0A0B;
+    --third-color: #252939;
+    --fourth-color: #ffffff;
+}
 
 /** ========== FONT SIZE FOR LARGE DEVICES ========== */
 @media screen and (min-width: 968px) {
     :root{
-
+        --big-font-size: 3rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
     }
 }
 
@@ -35,9 +87,9 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    margin: 0 0 var(--header-heigh) 0;
-    font-family: var();
-    font-size: var();
+    margin: 0 0 var(--header-height) 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
     background-color: var();
     color: var();
 }
@@ -79,35 +131,86 @@ img{
 /** ========== LAYOUT ========== */
 .container{
     max-width: 768px;
-    margin-left: var();
-    margin-right: var();
+    margin-left: var(--m-1-5);
+    margin-right: var(--n-1-5);
 }
 .grid{
     display: grid;
     gap: 1.5rem;
 }
-
-
-/** ========== HEADER SECTION ==========*/
 .header{
     width: 100%;
     position: fixed;
-    top: 0;
+    bottom: 0;
     left: 0;
-    z-index: var();
+    z-index: var(--z-);
     background-color: var();
 }
+
+
+/** ========== HEADER SECTION ==========*/
 .nav{
     max-width: 968px;
-    height: var(--header-heigh);
+    height: var(--header-height);
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.nav__logo{
-    color: violet;
-    font-weight: 500;
+.nav__logo,
+.nav__toggle{
+    color: red;
+    font-weight: var(--font-medium);
 }
 .nav__logo:hover{
-    color: red;
+    color: #0A0A0B;
 }
+.nav__toggle{
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.nav__toggle:hover{
+    color: violet;
+}
+@media screen and (max-width: 767px){
+    .nav__menu{
+        position: fixed;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        background-color: lightgray;
+        padding: 2rem 1.5rem 4rem;
+        box-shadow: 0 -1px 4px rgba(0,0,0,.15);
+        border-radius: 1.5rem 1.5rem 0 0;
+        transition: .3s;
+    }
+}
+.nav__list{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.nav__link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--small-font-size);
+    color: red;
+    font-weight: var(--font-medium);
+}
+.nav__icon{
+    font-size: 1.2rem;
+}
+.nav__close{
+    position: absolute;
+    right: 1.3rem;
+    bottom: .5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: yellow;
+}
+.show{
+    bottom: 0;
+}
+
+/** ========== MEDIA QUERIES ========== */
+
+/* ===== HEADER QUERY ===== */
