@@ -467,7 +467,61 @@
         </div>
       </section>
 
-      <!--========== PORTFOLIO ==========--> 1h26min43s
+      <!--========== PORTFOLIO ==========--> 
+      <section class="portfolio section" id="portfolio">
+        <h2 class="section__tittle">Portfolio</h2>
+        <span class="section__subtittle">Most recently work</span>
+
+        <div class="portfolio__container container swiper mySwiper">
+          <div class="swiper-wrapper">
+            <!--========== PORTFOLIO 1 ==========-->
+            <div class="portfolio__content grid swiper-slide">
+              <img src="assets/img/to-do-list.png" class="portfolio__img">
+
+              <div class="portfolio__data">
+                <h3 class="portfolio_tittle">To-Do List</h3>
+                <p class="portfolio__description">A simple to-do list, wich dosen't refresh when closing the browser. It makes simple tasks like remove or add something.</p>
+                <a href="#" class="button button--flex button--small portfolio__buton">
+                  Source <i class="uil uil-arrow-right button__icon"></i>
+                </a>
+              </div>
+            </div>
+
+            <!--========== PORTFOLIO 2 ==========-->
+            <div class="portfolio__content grid swiper-slide">
+              <img src="assets/img/gerar-pass.png" class="portfolio__img">
+
+              <div class="portfolio__data">
+                <h3 class="portfolio_tittle">Generate Password</h3>
+                <p class="portfolio__description">A quickly generated password, with numbers, special caracters and upper or lowercase letters.</p>
+                <a href="#" class="button button--flex button--small portfolio__buton">
+                  Source <i class="uil uil-arrow-right button__icon"></i>
+                </a>
+              </div>
+            </div>
+
+            <!--========== PORTFOLIO 3 ==========-->
+            <div class="portfolio__content grid swiper-slide">
+              <img src="" alt="imagem do porftolio.png" class="portfolio__img">
+
+              <div class="portfolio__data">
+                <h3 class="portfolio_tittle">Web Portfolio</h3>
+                <p class="portfolio__description">My second version portfolio, more beautiful and organized than the first. It used html, css and javascript.</p>
+                <a href="#" class="button button--flex button--small portfolio__buton">
+                  Source <i class="uil uil-arrow-right button__icon"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!--===== ADD ARROWS =====-->
+          <div class="swiper-button-next">
+            <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+          </div>
+          <div class="swiper-button-prev">
+            <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+          </div>
+        </div>
+      </section>
 
 
       <!--========== CONTACT ME ==========-->
@@ -485,7 +539,17 @@
 
     <!--========== SWIPER JS ==========-->
     <script src="assets/js/swiper-bundle.min.js"></script>
-    <script></script>
+    <script>
+      var swiper = new Swiper(".portfolio__container", {
+        cssMode: true,
+        loop: true,
+
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
 
   </body>
 </html>
