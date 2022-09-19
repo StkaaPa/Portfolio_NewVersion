@@ -29,6 +29,7 @@ function linkAction(){
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
+
 /*--------------------------------------------------------------------------------------- */
 /* ===== QUALIFICATION TABS ===== */
 const tabs = document.querySelectorAll('[data-target]'),
