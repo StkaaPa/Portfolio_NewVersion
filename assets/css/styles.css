@@ -54,14 +54,8 @@
     /** ========== Z-INDEX ========== */
     --z-tooltip: 10;
     --z-fixed: 100;
-    --z-modal: 1000;
-
-    /** ========== DARK MODE ========== */
-    --first-color: #215BF0;
-    --second-color: #0A0A0B;
-    --third-color: #252939;
-    --fourth-color: #ffffff;
 }
+
 
 /** ========== FONT SIZE FOR LARGE DEVICES ========== */
 @media screen and (min-width: 968px) {
@@ -74,6 +68,25 @@
         --small-font-size: .875rem;
         --smaller-font-size: .813rem;
     }
+}
+
+
+/** ========== DARK MODE ==========*/
+.nav__btns{
+    display: flex;
+    align-items: center;
+}
+.change-theme{
+    font-size: 1.25rem;
+    color: red;
+    margin-right: var(--m-1);
+    cursor: pointer;
+}
+body.dark-theme{
+    --first-color: red;
+    --second-color: orange;
+    --third-color: yellow;
+    --fourth-color: black;
 }
 
 
@@ -90,8 +103,8 @@ body{
     margin: 0 0 var(--header-height) 0;
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
-    background-color: var();
-    color: var();
+    background-color: var(--fourth-color);
+    color: var(--second-color);
 }
 h1,h2,h3,h4 {
     color: var();
@@ -120,7 +133,7 @@ img{
 .section__subtittle{
     display: block;
     font-size: var(--small-font-size);
-    margin-bottom: var();
+    margin-bottom: var(--m-3);
 }
 .section__tittle,
 .section__subtittle{
@@ -143,7 +156,7 @@ img{
     position: fixed;
     bottom: 0;
     left: 0;
-    z-index: var(--z-);
+    z-index: var(--z-fixed);
     background-color: lightgray;
 }
 .button{
@@ -476,7 +489,7 @@ width: 60%;
     overflow: initial;
 }
 .portfolio__content{
-    padding: 2rem 4.3rem 0 4.3rem;
+    padding: 0 4.3rem;
 }
 .portfolio__img{
     width: 265px;
@@ -503,9 +516,79 @@ width: 60%;
 }
 
 
-/** ========== PORTFOLIO SECTION ==========*/
+/** ========== CONTACT ME SECTION ==========*/
+.contact__container{
+    row-gap: 3rem;
+}
+.contact__information{
+    display: flex;
+    margin-bottom: var(--m-2);
+}
+.contact__icon{
+    font-size: 2rem;
+    color: red;
+    margin-right: var(--m-0-75);
+}
+.contact__tittle{
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+}
+.contact__subtittle{
+    font-size: var(--small-font-size);
+    color: lightslategray;
+}
+
+
+/** ========== FOOTER SECTION ========== */
+.footer{
+    padding-top: 2rem;
+}
+.footer__container{
+    row-gap: 3.5rem;
+}
+.footer__bg{
+    background-color: lightblue;
+    padding: 2rem 0 3rem;
+}
+.footer__tittle{
+    font-size: var(--h1-font-size);
+    margin-bottom: var(--m-0-25);
+}
+.footer__subtittle{
+    font-size: var(--small-font-size);
+}
+.footer__links{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
+.footer__links:hover{
+    color: red;
+}
+.footer__social{
+    font-size: 1.25rem;
+    margin-right: var(--m-1-5);
+}
+.footer__social:hover{
+    color: red;
+}
+.footer__copy{
+    font-size: var(--smaller-font-size);
+    text-align: center;
+    color: red;
+}
+.footer__tittle,
+.footer__subtittle,
+.footer__link,
+.footer__social{
+    color: #fff;
+}
 
 
 /** ========== MEDIA QUERIES ========== */
+/** For small devices */
+@media screen and (max-width: 350px) {
+    
+}
 
 /* ===== HEADER QUERY ===== */
