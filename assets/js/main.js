@@ -18,6 +18,8 @@ const showMenu = (toggleId, navId, closeId) =>{
 }
 showMenu('nav-toggle','nav-menu','nav-close')
 
+
+
 /*--------------------------------------------------------------------------------------- */
 /* ===== ACTIVE AND REMOVE MENU ===== */
 const navLink = document.querySelectorAll('.nav__link')
@@ -71,6 +73,8 @@ function toggleSkills(){
 skillsHeader.forEach((el) => {
   el.addEventListener('click', toggleSkills)
 });
+
+
 
 /*-------------------------------------------------------------------------------------- */
 /* ===== DARK LIGHT THEME ===== */
