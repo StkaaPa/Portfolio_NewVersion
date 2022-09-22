@@ -107,7 +107,7 @@ body{
     color: var(--second-color);
 }
 h1,h2,h3,h4 {
-    color: var();
+    color: black;
     font-weight: var(--font-semi-bold);
 }
 ul{
@@ -128,7 +128,6 @@ img{
 }
 .section__tittle{
     font-size: var(--h1-font-size);
-    color: var();
 }
 .section__subtittle{
     display: block;
@@ -355,7 +354,7 @@ img{
     justify-content: space-between;
     margin-bottom: var(--m-0-5);
 }
-.skills__name{
+.skills_name{
     font-size: var(--normal-font-size);
     font-weight: var(--font-medium);
 }
