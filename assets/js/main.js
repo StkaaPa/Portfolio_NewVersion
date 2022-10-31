@@ -1,23 +1,20 @@
 /* ===== SHOW MENU ===== */
-const showMenu = (toggleId, navId, closeId) =>{
-  const toggle = document.getElementById(toggleId), 
-        nav = document.getElementById(navId), 
-        navClose = document.getElementById(closeId)
+const navMenu = document.getElementById('nav-menu'),
+      navToogle = document.getElementById('nav-toogle'),
+      navClose = document.getElementById('nav-close')
 
-  if(toggle && nav){
-    toggle.addEventListener('click', () => {
-      nav.classList.toggle('show')
-    })
-  }
+      /* Validate if constant exists */
+if(navToogle){
+  navToogle.addEventListener('click', () => {
+    navMenu.classList.add('show-menu')
+  })
 
-  if(navClose){
-    navClose.addEventListener('click', () => {
-      nav.classList.remove('show')
-    })
-  }
+if(navClose){
+  navClose.addEventListener('click', () => {
+    navMenu.classList.remove('show-menu')
+  })
 }
-showMenu('nav-toggle','nav-menu','nav-close')
-
+}
 
 
 /*--------------------------------------------------------------------------------------- */
@@ -27,7 +24,7 @@ const navLink = document.querySelectorAll('.nav__link')
 function linkAction(){
   //REMOVE MENU ON MOBILE
   const navMenu = document.getElementById('nav-menu')
-  navMenu.classList.remove('show')
+  navMenu.classList.remove('show-menu')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
