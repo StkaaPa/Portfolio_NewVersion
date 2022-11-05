@@ -573,7 +573,7 @@
           </div>
 
           <div>
-            <button id="contact-submit" name="submit" type="submit" class="button submit button--flex">
+            <button id="contact-submit" name="submit" type="submit" class="button button--flex submit" onclick="resetForm()">
               Send Message <i class="uil uil-message button__icon"></i>
             </button>
           </div>
@@ -590,15 +590,14 @@
 
   <!--========== EMAIL JS ==========-->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <script type="text/javascript">
-    (function() {
-      emailjs.init("y1-wBdvsLH6-DnYe3");
-    })();
-  </script>
   
   <!--========== SWEET ALERT JS ==========-->
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <script>
+  <script type="text/javascript">
+
+    (function() {
+      emailjs.init("y1-wBdvsLH6-DnYe3");
+    })();
 
     function validate(){
       let name = document.querySelector('.username')
@@ -612,16 +611,26 @@
         if(name.value == "" || email.value == "" || msg.value == ""){
           inputempty();
         }else{
-          sendEmail(name.value, email.value, msg.value)
-          success();
-          
-          if(!sendEmail(name.value, email.value, msg.value)){
-            error()
+          if(!sendEmail()){
+            error();
+            return;
+          }else{
+            sendEmail(name.value, email.value, msg.value)
+            success();
           }
         }
       })
     }
     validate()
+
+    /*function validEmail(email){
+      var reg = /^[a-z0-9.]+@[a-z]+\.+[a-z]{2,3}/gi;
+      if(reg.test(email)){
+        return true;
+      }else{
+        return false;
+      }
+    }*/
 
     function sendEmail(name, email, msg){
       emailjs.send("service_sj3fsaq","template_vkt7qos",{
@@ -644,7 +653,7 @@
     function error(){
       swal({
         title: "Oops...!",
-        text: "Something went wrong, message could not be sent!",
+        text: "Email invalid...!",
         icon: "error",
         button: "close",
       });
@@ -659,6 +668,12 @@
       });
     }
   </script>
+
+  <script>
+    function resetForm() {
+      document.getElementById("contact-form").reset();
+    }
+    </script>
 
   <!--========== SWIPER JS ==========-->
   <script src="/assets/js/swiper-bundle.min.js"></script>
