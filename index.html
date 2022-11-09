@@ -27,7 +27,7 @@
       <div class="nav__menu" id="nav-menu">
         <ul class="nav__list grid">
           <li class="nav__item">
-            <a href="#home" class="nav__link">
+            <a href="#home" class="nav__link active-link">
               <i class="uil uil-estate nav__icon"></i> Home
             </a>
           </li>
@@ -61,6 +61,9 @@
       </div>
 
       <div class="nav__btns">
+
+        <i class="uil uil-moon change-theme" id="theme-button"></i>
+
         <div class="nav__toogle" id="nav-toogle">
           <i class="uil uil-apps"></i>
         </div>
@@ -586,6 +589,37 @@
 
   <!--========== FOOTER ==========-->
   <footer class="footer">
+    <div class="footer__bg">
+      <div class="footer__container container grid">
+        <div>
+          <h1 class="footer__title">Samuel</h1>
+          <span class="footer__subtitle">ETL Consultant</span>
+        </div>
+
+        <ul class="footer__links">
+          <li><a href="#about" class="footer__link">About</a></li>
+          <li><a href="#skills" class="footer__link">Skills</a></li>
+          <li><a href="#qualification" class="footer__link">Qualification</a></li>
+          <li><a href="#portfolio" class="footer__link">Portfolio</a></li>
+          <li><a href="#contact" class="footer__link">Contact</a></li>
+        </ul>
+
+        <div class="footer__socials">
+          <a href="" class="footer__social">
+            <i class="uil uil-linkedin-alt"></i>
+          </a>
+          <a href="" class="footer__social">
+            <i class="uil uil-github-alt"></i>
+          </a>
+          <a href="" class="footer__social">
+            <i class="uil uil-instagram-alt"></i>
+          </a>
+        </div>
+
+        <p class="footer__copy">&#169; Samuel. All right reserved</p>
+
+      </div>
+    </div>
   </footer>
 
   <!--========== EMAIL JS ==========-->
@@ -594,9 +628,8 @@
   <!--========== SWEET ALERT JS ==========-->
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script type="text/javascript">
-
     (function() {
-      emailjs.init("y1-wBdvsLH6-DnYe3");
+      emailjs.init("y1-wBdvsLH6-DnYe3");    
     })();
 
     function validate(){
@@ -622,15 +655,6 @@
       })
     }
     validate()
-
-    /*function validEmail(email){
-      var reg = /^[a-z0-9.]+@[a-z]+\.+[a-z]{2,3}/gi;
-      if(reg.test(email)){
-        return true;
-      }else{
-        return false;
-      }
-    }*/
 
     function sendEmail(name, email, msg){
       emailjs.send("service_sj3fsaq","template_vkt7qos",{
