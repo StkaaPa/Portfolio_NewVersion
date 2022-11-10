@@ -1,4 +1,4 @@
-//* ===== SHOW MENU ===== */
+//* ====================  SHOW MENU ====================  */
 const navMenu = document.getElementById('nav-menu'),
       navToogle = document.getElementById('nav-toogle'),
       navClose = document.getElementById('nav-close')
@@ -17,7 +17,7 @@ if(navClose){
 }
 
 
-//* ===== ACTIVE AND REMOVE MENU ===== */
+//* ====================  ACTIVE AND REMOVE MENU ====================  */
 const navLink = document.querySelectorAll('.nav__link')
 
 function linkAction(){
@@ -28,7 +28,7 @@ function linkAction(){
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
 
-//* ===== QUALIFICATION TABS ===== */
+//* ====================  QUALIFICATION TABS ====================  */
 const tabs = document.querySelectorAll('[data-target]'),
       tabContents = document.querySelectorAll('[data-content]')
 
@@ -79,7 +79,7 @@ function scrollHeader(){
 window.addEventListener('scroll', scrollHeader)
 
 
-//* ===== OPEN/CLOSE SKILLS LIST ===== */
+//* ====================  OPEN/CLOSE SKILLS LIST ====================  */
 const skillsContent = document.getElementsByClassName('skills__content'),
       skillsHeader = document.querySelectorAll('.skills__header');
 
@@ -99,7 +99,7 @@ skillsHeader.forEach((el) => {
 });
 
 
-/** ===== DARK LIGHT THEME ===== */
+//* ====================  DARK LIGHT THEME ====================  */
 const themeButton = document.getElementById('theme-button')
 const darkTheme = 'dark-theme'
 const iconTheme = 'uil-sun'
