@@ -101,7 +101,7 @@ body{
     margin: 0 0 var(--header-height);
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
-    background-color: #fff;
+    background-color: lightslategrey;
     color: var(--third-color);
 }
 h1,h2,h3,h4{
