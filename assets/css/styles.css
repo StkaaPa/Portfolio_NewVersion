@@ -169,6 +169,7 @@ textarea{
 .button-message{
     font-size: 1.25rem;
     transition: .3s;
+    font-weight: var(--font-medium);
 }
 
 
@@ -637,14 +638,14 @@ textarea{
     row-gap: 1.5rem;
 }
 .footer__link:hover{
-    color: #FFFFFF;
+    color: var(--fourth-color);
 }
 .footer__social{
     font-size: 1.25rem;
     margin-right: var(--m-1-5);
 }
 .footer__social:hover{
-    color: #FFFFFF;
+    color: var(--fourth-color);
 }
 .footer__copy{
     font-size: var(--smaller-font-size);
