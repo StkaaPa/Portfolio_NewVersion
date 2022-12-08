@@ -579,7 +579,7 @@
             </div>
 
             <div>
-                <button id="submit" name="submit" type="submit" class="submit button button-message button--flex" onclick="resetForm()">
+                <button id="submit" name="submit" type="submit" class="submit button button-message button--flex">
                   Send Message <i class="uil uil-message button-icon"></i></button>
             </div>
 
@@ -624,13 +624,6 @@
       </div>
     </footer>
 
-  <!--========== RESET CONTACT FORM =========-->
-  <script>
-    function resetForm() {
-      document.getElementById("contact-form").reset();
-    }
-  </script>-->
-
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
   </script>
   
@@ -652,10 +645,11 @@
         e.preventDefault();
 
         if(name.value === "" || mail.value === "" || msg.value === ""){
-          inputEmpty();
+          inputEmpty()
         }else {
           sendEmail(name.value, mail.value, msg.value)
-          success();
+          success()
+          resetForm()
         }
       })
     }
@@ -687,8 +681,14 @@
         button: "Close",
       });
     }
-
   </script>
+
+    <!--========== RESET CONTACT FORM =========-->
+  <script>
+    function resetForm() {
+      document.getElementById("contact-form").reset();
+    }
+  </script>-->
 
   <!--========== SWIPER JS ==========-->
   <script src="assets/js/swiper-bundle.min.js"></script>
